@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,0O;AACAA,UAAU,CAACC,eAAD,CAAV,C","file":"pages/tabbar/yinbao/yinbao/pages/wxLive/wxLive.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/tabbar/yinbao/yinbao/pages/wxLive/wxLive.vue'\ncreatePage(Page)"],"sourceRoot":""}

@@ -1,0 +1,7 @@
+
+.quzhibo{
+	background-image: url("");
+	height: 180rpx;
+	background-size: 100% 100%;
+}
+

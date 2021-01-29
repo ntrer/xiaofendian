@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,2N;AACAA,UAAU,CAACC,YAAD,CAAV,C","file":"pages/tabbar/yinbao/yinbao/yuE/yuE.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/tabbar/yinbao/yinbao/yuE/yuE.vue'\ncreatePage(Page)"],"sourceRoot":""}

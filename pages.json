@@ -1,0 +1,458 @@
+{
+	"easycom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		},
+	
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	    {
+	        "path" : "pages/index/index",
+	        "style" :                                                                                    
+	        {
+	            "navigationBarTitleText": "",
+	            "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#fff"
+	        }
+	        
+	    },
+		{
+		            "path" : "pages/tabbar/yinbao/yinbao",
+		            "style" :                                                                                    
+		            {
+		                "enablePullDownRefresh": true,
+						"navigationStyle":"custom"
+		            }
+		            
+		        }
+		        ,{
+		            "path" : "pages/tabbar/yinliu/yinliu",
+		            "style" :                                                                                    
+		            {
+		                "navigationBarTitleText": "",
+		                "enablePullDownRefresh": false
+		            }
+		            
+		        }
+		        ,{
+		            "path" : "pages/tabbar/dingdan/dingdan",
+		            "style" :                                                                                    
+		            {
+		                "navigationBarTitleText": "订单收益",
+		                "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+						
+		            }
+		            
+		        }
+		        ,{
+		            "path" : "pages/tabbar/wode/wode",
+		            "style" :                                                                                    
+		            {
+		                "navigationBarTitleText": "我的粉丝",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+						"enablePullDownRefresh": true
+		            }
+		            
+		        }
+
+
+    ],
+	
+	"subPackages":[
+		{
+			"root":"pages/yinbao/",
+			"pages":[
+				{
+					"path" : "person/person",
+					"style" :                                                                                    
+					{
+					    "navigationBarTitleText": "个人中心",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+				    "path" : "orderDetail/orderDetail",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "goodsControl/goodsControl",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "shopSetting/shopSetting",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "moreGoods/moreGoods",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "shop/shop",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "moreFenLei/moreFenLei",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "safe/safe",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "yinSi/yinSi",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "changePhone/changePhone",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "faBuRenWu/faBuRenWu",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				
+				{
+				    "path" : "fans/fans",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": true
+				    }
+				    
+				},
+				{
+				    "path" : "orderAnalyze/orderAnalyze",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "订单收益分析",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": false
+				    }
+				    
+				},
+				{
+				    "path" : "yuE/yuE",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": false
+				    }
+				    
+				},
+				{
+				    "path" : "dianPu/dianPu",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": false
+				    }
+				    
+				},
+				{
+				    "path" : "keLiuLieBian/keLiuLieBian",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white"
+				    }
+				    
+				},
+				{
+				    "path" : "allActivity/allActivity",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "wxLive/wxLive",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "createLive/createLive",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "shopCircle/shopCircle",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "woDeYongJin/woDeYongJin",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "shopTask/shopTask",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "tuiJianYaoYue/tuiJianYaoYue",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "fabuTask/fabuTask",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "ziDingYiChaXun/ziDingYiChaXun",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "dianPuZiLiao/dianPuZiLiao",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "dianPuFenLei/dianPuFenLei",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "secondFenLei/secondFenLei",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+				,{
+				    "path" : "yongJinPeiZhi/yongJinPeiZhi",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+						
+				    }
+				    
+				}
+				,{
+				    "path" : "shouKuanMa/shouKuanMa",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+						
+				    }
+				    
+				}
+				
+			]
+		},
+		{
+			"root":"pages/yinliu/",
+			"pages":[]
+		},
+		{
+			"root":"pages/dingdan/",
+			"pages":[
+				{
+				    "path" : "orderAnalyze/orderAnalyze",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "订单收益分析",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": false
+				    }
+				    
+				},
+				{
+				    "path" : "ziDingYiChaXun/ziDingYiChaXun",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+			]
+		},
+		{
+			"root":"pages/wode/",
+			"pages":[
+				{
+				    "path" : "fans/fans",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+				        "enablePullDownRefresh": true
+				    }
+				    
+				}
+			]
+		}
+	],
+	
+	
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/tabbar/yinbao/yinbao",
+				"iconPath": "static/tabbar/component.png",
+				"selectedIconPath": "static/tabbar/componentHL.png",
+				"text": "引爆客流"
+			},
+			{
+				"pagePath": "pages/tabbar/yinliu/yinliu",
+				"iconPath": "static/tabbar/api.png",
+				"selectedIconPath": "static/tabbar/apiHL.png",
+				"text": "引流系统"
+			}, {
+				"pagePath": "pages/tabbar/dingdan/dingdan",
+				"iconPath": "static/tabbar/extui.png",
+				"selectedIconPath": "static/tabbar/extuiHL.png",
+				"text": "订单收益"
+			}, {
+				"pagePath": "pages/tabbar/wode/wode",
+				"iconPath": "static/tabbar/template.png",
+				"selectedIconPath": "static/tabbar/templateHL.png",
+				"text": "我的粉丝"
+			}
+		]
+	}
+}

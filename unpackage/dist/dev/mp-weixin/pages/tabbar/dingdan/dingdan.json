@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单收益",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "divider": "/components/divider"
+  }
+}

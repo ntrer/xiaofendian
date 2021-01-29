@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,0N;AACAA,UAAU,CAACC,aAAD,CAAV,C","file":"pages/tabbar/wode/wode/fans/fans.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/tabbar/wode/wode/fans/fans.vue'\ncreatePage(Page)"],"sourceRoot":""}

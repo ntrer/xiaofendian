@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的粉丝",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "divider": "/components/divider",
+    "free-avater": "/components/free-avater"
+  }
+}
