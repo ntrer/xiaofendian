@@ -90,7 +90,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  uNavbar: function() {
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 515))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -128,7 +132,156 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -137,11 +290,66 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      background: {
+        backgroundColor: '#FF7200' } };
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    toShop: function toShop() {
+      uni.navigateTo({
+        url: '../../yinbao/shop/shop' });
+
+    },
+
+    toZhuanPan: function toZhuanPan() {
+      uni.navigateTo({
+        url: '../../yinliu/dazhuanpan/dazhuanpan' });
+
+    },
+
+    totuijian: function totuijian() {
+      uni.navigateTo({
+        url: '../../yinliu2/tuijian/tuijian' });
+
+    },
+
+    tofaquan: function tofaquan() {
+      uni.navigateTo({
+        url: '../../yinliu/faquan/faquan' });
+
+    },
+    tokanjia: function tokanjia() {
+      uni.navigateTo({
+        url: '../../yinliu/kanjia/kanjia' });
+
+    },
+
+    tomiaosha: function tomiaosha() {
+      uni.navigateTo({
+        url: '../../yinliu2/miaosha/miaosha' });
+
+    },
+
+    tojindan: function tojindan() {
+      uni.navigateTo({
+        url: '../../yinliu2/zajindan/zajindan' });
+
+    },
+
+    topintuan: function topintuan() {
+      uni.navigateTo({
+        url: '../../yinliu2/pintuan/pintuan' });
+
+    },
+
+    tohongbao: function tohongbao() {
+      uni.navigateTo({
+        url: '../../yinliu/hongbao/hongbao' });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

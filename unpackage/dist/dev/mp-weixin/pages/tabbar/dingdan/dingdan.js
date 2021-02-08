@@ -92,7 +92,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uNavbar: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 283))
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 515))
+  },
+  uniLoadMore: function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 493))
   }
 }
 var render = function() {
@@ -132,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 302));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -208,50 +211,167 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-{
-  components: {
-    divider: divider },
 
-  data: function data() {
-    return {
-      background: {
-        backgroundImage: 'linear-gradient(0deg, #FF7200 0%, #FFB183 100%)' },
 
-      tabIndex: 0,
-      time: "2020.01.20",
-      catagor: [{
-        name: '全部',
-        id: 1 },
-      {
-        name: '优惠买单',
-        id: 2 },
 
-      {
-        name: '到店核销',
-        id: 3 },
 
-      {
-        name: '活动线上',
-        id: 4 },
 
-      {
-        name: '活动到店',
-        id: 5 },
 
-      {
-        name: '余额',
-        id: 6 }] };
 
 
 
-  },
-  methods: {
+
+
+
+
+
+
+var _request = _interopRequireDefault(__webpack_require__(/*! @/common/request.js */ 46));
+var _config = _interopRequireDefault(__webpack_require__(/*! @/common/config.js */ 47));
+var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//引入网络请求
+var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 493));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 534));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { divider: divider, uniLoadMore: uniLoadMore }, data: function data() {return { background: { backgroundImage: 'linear-gradient(0deg, #FF7200 0%, #FFB183 100%)' }, tabIndex: 0, time: "2020.01.20", orderNum: "", orderPrice: "", yuE: "", type: 1, listData: [], catagor: [{ name: '优惠买单', id: 2 }, { name: '商城订单', id: 3 }], page: 1, reload: true, loadMore: false, status: 'more', nodata: false, contentText: { contentdown: '查看更多', contentrefresh: '加载中', contentnomore: '没有更多' } };}, onLoad: function onLoad() {this.getHeader();this.getList();}, onReachBottom: function onReachBottom() {this.loadMore = true;this.page++;if (this.status == 'noMore') {return;}this.status = 'loading';this.getList();}, methods: { getHeader: function getHeader() {var _this = this; // 发送到服务端
+      _request.default.get("/order/profit").then(function (res) {//请求成功
+        console.log(res);_this.orderNum = res.data.orderListComplete;_this.orderPrice = res.data.orderSumPayPrice;_this.yuE = res.data.account;}).catch(function (e) {//请求失败
+        console.log("失败" + e);});}, getList: function getList() {var _this2 = this;var data = { type: this.type, size: 10, current: this.page }; // 发送到服务端
+      _request.default.get("/order/page/all", data).then(function (res) {//请求成功
+        var list = res.data.records;var pages = res.data.pages;console.log(list);if (pages > 1 && _this2.page <= pages) {_this2.listData = _this2.reload ? list : _this2.listData.concat(list);
+          _this2.nodata = false;
+        } else
+        if (pages == 0) {
+          _this2.listData = [];
+          _this2.nodata = true;
+          _this2.status = 'noMore';
+        } else
+        if (pages == 1) {
+          _this2.listData = list;
+          _this2.status = 'noMore';
+          _this2.nodata = false;
+        } else
+        {
+          _this2.status = 'noMore';
+        }
+
+        console.log(_this2.listData);
+
+        _this2.reload = false;
+
+      }).catch(function (e) {
+
+        //请求失败
+        console.log("失败" + e);
+      });
+    },
+
+
+
     changeIndex: function changeIndex(index) {
       if (this.tabIndex == index) {
         return;
       }
       this.tabIndex = index;
-
+      this.reload = true;
+      if (index == 0) {
+        this.type = 1;
+        this.page = 1;
+        this.reload = true;
+        this.status = 'more';
+        this.getList();
+      } else
+      {
+        this.type = 2;
+        this.page = 1;
+        this.reload = true;
+        this.status = 'more';
+        this.getList();
+      }
     },
 
     toSearch: function toSearch() {
@@ -262,7 +382,13 @@ __webpack_require__.r(__webpack_exports__);
 
     toOrder: function toOrder() {
       uni.navigateTo({
-        url: '../../dingdan/orderAnalyze/orderAnalyze' });
+        url: '../../yinbao/orderAnalyze/orderAnalyze' });
+
+    },
+
+    toZiJin: function toZiJin() {
+      uni.navigateTo({
+        url: '../../yinbao/yuE/yuE' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

@@ -1,5 +1,5 @@
 <template>
-	<view style="background-color: #F4F4F4;height: 100vh;">
+	<view >
 		<u-navbar title="任务平台"  :background="background" title-color="#000" :isBack="true"></u-navbar>
 	    
 		
@@ -16,23 +16,23 @@ box-shadow: 0rpx 0rpx 32rpx 0rpx rgba(244, 49, 50, 0.4);border-radius: 10rpx;mar
 			<!-- 4个数据块 -->
 			<view class="flex flex-row pt-5 pl-2 pr-2" >
 				<view class="flex flex-1 align-center  flex-column" style="font-size: 28rpx;color: #fff;">
-					<text>商圈任务</text>
-					<text class="mt-2">6666</text>
+					<text>平台任务</text>
+					<text class="mt-2">{{taskNum}}</text>
 				</view>
 				
 				<view class="flex flex-1 align-center  flex-column" style="font-size: 28rpx;color: #fff;">
-					<text>商圈店铺</text>
-					<text class="mt-2">6666</text>
+					<text>发布任务</text>
+					<text class="mt-2">{{taskingNum}}</text>
 				</view>
 				
 				<view class="flex flex-1 align-center  flex-column" style="font-size: 28rpx;color: #fff;">
 					<text>佣金收益</text>
-					<text class="mt-2">6666</text>
+					<text class="mt-2">￥{{getMoney}}</text>
 				</view>
 				
 				<view class="flex flex-1 align-center  flex-column" style="font-size: 28rpx;color: #fff;">
 					<text>佣金支出</text>
-					<text class="mt-2">6666</text>
+					<text class="mt-2">￥{{payMoney}}</text>
 				</view>
 				
 			</view>
@@ -68,7 +68,7 @@ box-shadow: 0rpx 0rpx 32rpx 0rpx rgba(244, 49, 50, 0.4);border-radius: 10rpx;mar
 		
 		<!-- 发布任务 -->
 		
-		<view class="main-bg-color flex align-center justify-center rounded-1" style="font-size: 36rpx;color: #fff; height: 75rpx; margin-left: 140rpx;margin-right: 140rpx;margin-top: 100rpx;" @click="toRenWu()">
+		<view class="main-bg-color flex align-center justify-center " style="font-size: 36rpx;color: #fff; height: 75rpx; margin-left: 140rpx;margin-right: 140rpx;margin-top: 100rpx; border-radius: 50rpx;" @click="toRenWu()">
 			 发布任务 		 
 		</view>
 		
@@ -76,15 +76,48 @@ box-shadow: 0rpx 0rpx 32rpx 0rpx rgba(244, 49, 50, 0.4);border-radius: 10rpx;mar
 </template>
 
 <script>
+	
+	//引入网络请求
+	import $H from '@/common/request.js';
+	import $C from '@/common/config.js';
+	import $U from '@/common/util.js';
+	
 	export default {
 		data() {
 			return {
 				background:{
 					backgroundColor: '#fff',
 				},
+				taskNum:0,
+				taskingNum:0,
+				getMoney:0,
+				payMoney:0
 			}
 		},
+		
+		onLoad() {
+			this.InitData()
+		},
+		
 		methods: {
+			
+			
+			InitData(){
+				// 发送到服务端
+				$H.get("/taskInit").then((res) => {
+					//请求成功
+					console.log(res)
+					this.taskNum=res.data.totalTask
+					this.taskingNum=res.data.totalCommission
+					this.getMoney=res.data.wati_acount
+					this.payMoney=res.data.totalPay
+				}).catch((e) => {
+					
+					//请求失败
+					console.log("失败"+e)
+				})
+			},
+			
 			toYongJin(){
 				uni.navigateTo({
 					url:'../woDeYongJin/woDeYongJin'

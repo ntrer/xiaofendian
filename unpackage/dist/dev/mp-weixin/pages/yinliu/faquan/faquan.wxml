@@ -1,0 +1,1 @@
+<view><u-navbar vue-id="5be46fd3-1" title="一键发圈" background="{{background}}" title-color="#000" isBack="{{true}}" bind:__l="__l"></u-navbar></view>

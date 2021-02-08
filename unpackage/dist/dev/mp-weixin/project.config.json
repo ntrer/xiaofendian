@@ -1,71 +1,33 @@
 {
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"minified": true,
-		"postcss": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "",
-	"appid": "wx28df2262b0423f12",
-	"projectname": "小分店",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/yinbao/shop/shop",
-					"pathName": "pages/yinbao/shop/shop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/yinbao/goodsControl/goodsControl",
-					"pathName": "pages/yinbao/goodsControl/goodsControl",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/tabbar/yinbao/yinbao",
-					"pathName": "pages/tabbar/yinbao/yinbao",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/yinbao/orderDetail/orderDetail",
-					"pathName": "pages/yinbao/orderDetail/orderDetail",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "minified": true,
+    "postcss": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx28df2262b0423f12",
+  "projectname": "小分店",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  }
 }

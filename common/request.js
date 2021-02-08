@@ -6,7 +6,7 @@ export default {
     common:{
         baseUrl:$C.baseUrl,
         header:{
-            'Content-Type':'application/json;charset=UTF-8',
+            'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8',
         },
         data:{},
         method:'GET',
@@ -43,10 +43,14 @@ export default {
   	// 请求
   	return new Promise((res,rej)=>{
   		// 请求之前... todo
+		uni.showLoading({
+			title:"请求中..."
+		})
   		// 请求中...
   		uni.request({
   			...options,
   			success: (result) => {
+				uni.hideLoading()
   				// 服务端失败
   				if(result.data.code!= 200){
 					
@@ -62,6 +66,7 @@ export default {
   				res(data,header)
   			},
   			fail: (error) => {
+				uni.hideLoading()
 				console.log(error)
   				uni.showToast({
   					title:"服务端失败",
@@ -88,6 +93,7 @@ export default {
         options.url = url
         options.data = data
         options.method = 'POST'
+		options.header = {'Content-Type':'application/json;charset=UTF-8'}
         return this.request(options)
     },
 	
@@ -116,7 +122,7 @@ export default {
 			    uni.showToast({ title: '请先登录', icon: 'none' });
 			    // token不存在时跳转
 			    return uni.reLaunch({
-			        url: '/pages/common/login/login',
+			        url: '/pages/index/index.vue',
 			    });
 			}
 			

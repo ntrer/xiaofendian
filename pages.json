@@ -28,7 +28,8 @@
 		            "style" :                                                                                    
 		            {
 		                "navigationBarTitleText": "",
-		                "enablePullDownRefresh": false
+		                "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
 		            }
 		            
 		        }
@@ -54,74 +55,15 @@
 		            }
 		            
 		        }
-
-
+			
+      
     ],
 	
 	"subPackages":[
 		{
 			"root":"pages/yinbao/",
 			"pages":[
-				{
-					"path" : "person/person",
-					"style" :                                                                                    
-					{
-					    "navigationBarTitleText": "个人中心",
-						"navigationStyle":"custom",
-						"navigationBarTextStyle":"white",
-					    "enablePullDownRefresh": false
-					}
-				},
-				{
-				    "path" : "orderDetail/orderDetail",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
-				{
-				    "path" : "goodsControl/goodsControl",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
-				{
-				    "path" : "shopSetting/shopSetting",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
-				{
-				    "path" : "moreGoods/moreGoods",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
-				{
-				    "path" : "shop/shop",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
+				
 				{
 				    "path" : "moreFenLei/moreFenLei",
 				    "style" :                                                                                    
@@ -133,7 +75,7 @@
 				    
 				},
 				{
-				    "path" : "safe/safe",
+				    "path" : "yongJinMingXi/yongJinMingXi",
 				    "style" :                                                                                    
 				    {
 				        "navigationBarTitleText": "",
@@ -143,17 +85,7 @@
 				    
 				},
 				{
-				    "path" : "yinSi/yinSi",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				},
-				{
-				    "path" : "changePhone/changePhone",
+				    "path" : "dingdanJinE/dingdanJinE",
 				    "style" :                                                                                    
 				    {
 				        "navigationBarTitleText": "",
@@ -167,7 +99,7 @@
 				    "style" :                                                                                    
 				    {
 				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
+				        "enablePullDownRefresh": true,
 						"navigationStyle":"custom"
 				    }
 				    
@@ -206,17 +138,7 @@
 				    }
 				    
 				},
-				{
-				    "path" : "dianPu/dianPu",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-						"navigationStyle":"custom",
-						"navigationBarTextStyle":"white",
-				        "enablePullDownRefresh": false
-				    }
-				    
-				},
+				
 				{
 				    "path" : "keLiuLieBian/keLiuLieBian",
 				    "style" :                                                                                    
@@ -283,7 +205,7 @@
 				    "style" :                                                                                    
 				    {
 				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
+				        "enablePullDownRefresh": true,
 						"navigationStyle":"custom"
 				    }
 				    
@@ -319,36 +241,6 @@
 				    
 				}
 				,{
-				    "path" : "dianPuZiLiao/dianPuZiLiao",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				}
-				,{
-				    "path" : "dianPuFenLei/dianPuFenLei",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				}
-				,{
-				    "path" : "secondFenLei/secondFenLei",
-				    "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false,
-						"navigationStyle":"custom"
-				    }
-				    
-				}
-				,{
 				    "path" : "yongJinPeiZhi/yongJinPeiZhi",
 				    "style" :                                                                                    
 				    {
@@ -373,9 +265,485 @@
 				
 			]
 		},
+		
+		{
+			"root":"pages/activityDetail/",
+			 "pages":[
+				 {
+				     "path" : "dazhuanpandetail/dazhuanpandetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "allRecord/allRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "zhongJiangTongji/zhongJiangTongji",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						  "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "createPoster/createPoster",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "tuiJianDetail/tuiJianDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "tuiJianRecord/tuiJianRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "pinTuanDetail/pinTuanDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "pintuanRecord/pintuanRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						  "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "kanJiaDetail/kanJiaDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						  "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "kanjiaRecord/kanjiaRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "hongbaoDetail/hongbaoDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						  "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "hongbaoRecord/hongbaoRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						  "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "zadanDetail/zadanDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "zadanRecord/zadanRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "zadanZhongJiangTongji/zadanZhongJiangTongji",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "miaoshaDetail/miaoshaDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "miaoshaRecord/miaoshaRecord",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 }
+			 ]
+		},
+		
+		{
+			"root":"pages/person/",
+			"pages":[
+				{
+					"path" : "person/person",
+					"style" :                                                                                    
+					{
+					    "navigationBarTitleText": "个人中心",
+						"navigationStyle":"custom",
+						"navigationBarTextStyle":"white",
+					    "enablePullDownRefresh": false
+					}
+				},
+				{
+				    "path" : "safe/safe",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "yinSi/yinSi",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "changePhone/changePhone",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+			]
+		},
+		{
+			"root":"pages/shop/",
+		     "pages":[
+				 {
+				     "path" : "shop/shop",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "shopSetting/shopSetting",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 
+				 {
+				     "path" : "moreGoods/moreGoods",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": true,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "goodsControl/goodsControl",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 
+				 {
+				     "path" : "goodsDetail/goodsDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "createGoods/createGoods",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				
+				 {
+				     "path" : "orderDetail/orderDetail",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "selectCatagor/selectCatagor",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 
+				 {
+				     "path" : "xingHaoJuTiSetting/xingHaoJuTiSetting",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 
+				 {
+				     "path" : "xingHaoSeting/xingHaoSeting",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 }
+			 ]
+		},
+		{
+			"root":"pages/dianpu/",
+			 "pages":[
+				 {
+				     "path" : "dianPuZiLiao/dianPuZiLiao",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 }
+				 ,{
+				     "path" : "gouMaiFuWu/gouMaiFuWu",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+						 "navigationStyle":"custom"
+				     }
+				     
+				 }
+				 ,{
+				     "path" : "dianPuFenLei/dianPuFenLei",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 },
+				 {
+				     "path" : "dianPu/dianPu",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				 		"navigationStyle":"custom",
+				 		"navigationBarTextStyle":"white",
+				         "enablePullDownRefresh": false
+				     }
+				     
+				 },
+				 {
+				     "path" : "secondFenLei/secondFenLei",
+				     "style" :                                                                                    
+				     {
+				         "navigationBarTitleText": "",
+				         "enablePullDownRefresh": false,
+				 		"navigationStyle":"custom"
+				     }
+				     
+				 }
+			 ]
+		},
+		
+		{
+			"root":"pages/yinliu2/",
+			"pages":[
+				{
+				    "path" : "pintuan/pintuan",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "tuijian/tuijian",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "miaosha/miaosha",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "zajindan/zajindan",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+			]
+		},
+		
 		{
 			"root":"pages/yinliu/",
-			"pages":[]
+			"pages":[
+				{
+				    "path" : "dazhuanpan/dazhuanpan",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "kanjia/kanjia",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "faquan/faquan",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				},
+				{
+				    "path" : "hongbao/hongbao",
+				    "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false,
+						"navigationStyle":"custom"
+				    }
+				    
+				}
+			]
 		},
 		{
 			"root":"pages/dingdan/",

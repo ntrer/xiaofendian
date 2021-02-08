@@ -92,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uNavbar: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 283))
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 515))
   }
 }
 var render = function() {
@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _request = _interopRequireDefault(__webpack_require__(/*! @/common/request.js */ 46));
 var _config = _interopRequireDefault(__webpack_require__(/*! @/common/config.js */ 47));
-var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 302));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var freeAvater = function freeAvater() {__webpack_require__.e(/*! require.ensure | components/free-avater */ "components/free-avater").then((function () {return resolve(__webpack_require__(/*! @/components/free-avater.vue */ 297));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 534));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var freeAvater = function freeAvater() {__webpack_require__.e(/*! require.ensure | components/free-avater */ "components/free-avater").then((function () {return resolve(__webpack_require__(/*! @/components/free-avater.vue */ 529));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
@@ -293,7 +293,12 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
     // 获取首页粉丝数据
     getData: function getData() {var _this = this;
       // 发送到服务端
-      _request.default.post("/fansInit").then(function (res) {
+      _request.default.post("/fansInit", {}, {
+        token: true }).
+      then(function (res) {
+
+        uni.stopPullDownRefresh();
+
         //请求成功
         console.log(res);
         _this.monthAdd = res.monthAdd;
@@ -304,6 +309,7 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
         _this.todyVisit = res.todyVisit;
 
       }).catch(function (e) {
+        uni.stopPullDownRefresh();
         //请求失败
         console.log("失败" + e);
       });

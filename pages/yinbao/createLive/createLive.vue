@@ -13,11 +13,11 @@
 		 <!-- 封面 -->
 		 <view class="flex align-center justify-between p-4" style="height: 360rpx;background-color: #F8F8F8;">
 			 <view class="rounded-1 flex align-center justify-center flex-column" style="background-color: #EBEAEA;height: 306rpx;width: 416rpx;">
-				 <image src="../../static/common/uploadPic.png" style="height: 100rpx;width: 100rpx;"></image>
+				 <image src="../../../static/common/uploadPic.png" style="height: 100rpx;width: 100rpx;"></image>
 				 <text style="font-size: 24rpx; color: #C2BDBD;margin-top: 25rpx;">添加分享封面</text>
 			 </view>
 			 <view class="ml-2 rounded-1 flex align-center justify-center flex-column" style="background-color: #EBEAEA;height: 306rpx;width: 268rpx;">
-				 <image src="../../static/common/uploadPic.png" style="height: 100rpx;width: 100rpx;"></image>
+				 <image src="../../../static/common/uploadPic.png" style="height: 100rpx;width: 100rpx;"></image>
 				 <text style="font-size: 24rpx; color: #C2BDBD;margin-top: 25rpx;">添加首页封面</text>
 			 </view>
 		 </view>

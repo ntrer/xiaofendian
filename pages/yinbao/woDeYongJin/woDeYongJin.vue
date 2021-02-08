@@ -4,7 +4,7 @@
 		
 		<view class="flex align-center text-color" style="height: 100rpx;background-color: #fff;">
 			<view class="main-bg-color" style="width: 8rpx;height: 42rpx;"></view> 
-			<text class="ml-4" style="font-size: 32rpx;">基本设置</text>
+			<text class="ml-4" style="font-size: 32rpx;font-family: PingFangSC-Medium, PingFang SC;color: #1D1200;font-weight: 600;">基本设置</text>
 			<view class="fixed-right mr-5 rounded flex align-center justify-center " style="border: #9F9F9F solid 1rpx;color: #9F9F9F;font-size: 26rpx;height: 44rpx;width: 100rpx;margin-top: 5rpx;border-radius: 8rpx;">
 				筛选⏷
 			</view>

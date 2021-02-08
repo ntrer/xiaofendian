@@ -159,7 +159,12 @@
 			// 获取首页粉丝数据
 			getData(){
 				// 发送到服务端
-				$H.post("/fansInit").then((res) => {
+				$H.post("/fansInit",{},{
+					token:true
+				}).then((res) => {
+					
+					uni.stopPullDownRefresh()
+					
 					//请求成功
 					console.log(res);
 					this.monthAdd=res.monthAdd
@@ -170,6 +175,7 @@
 					this.todyVisit=res.todyVisit
 					
 				}).catch((e) => {
+					uni.stopPullDownRefresh()
 					//请求失败
 					console.log("失败"+e)
 				})

@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-dropdown": "/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "uni-load-more": "/components/uni-load-more/uni-load-more",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "divider": "/components/divider"
+  }
+}

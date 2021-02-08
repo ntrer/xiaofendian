@@ -1,0 +1,32 @@
+<template>
+	<view>
+		<u-navbar title="安全中心"  :background="background" title-color="#000" :isBack="true"></u-navbar>
+		
+		<view class=" ml-2 mr-2 mt-2 mb-2" style="color: #8A8A8A;">注销账户：当前账户注销后，将无法登录账号数据将无法找回</view>
+		
+		
+		<view class="main-bg-color flex align-center justify-center " style="font-size: 32rpx;color: #fff; height: 75rpx; margin-left: 60rpx;margin-right: 60rpx;margin-top: 60rpx;border-radius: 50rpx;" >
+			 已了解风险，确认注销 		 
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				background:{
+					backgroundColor: '#fff',
+				}
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

@@ -1,9 +1,9 @@
 <template>
 	<view style="background-color: #F4F4F4;min-height: 100vh;">
-		<u-navbar  :background="background" title-color="#fff":isBack="false">
+		<u-navbar  :background="background" title-color="#fff" :isBack="false">
 			<view class="flex align-center ml-4" @click="toShopList()">
-				<free-avater size="50" style="margin-right: 10rpx;margin-top: 5rpx;"></free-avater>
-				<text class="map-wrap-text mr-1 ml-1" style="font-weight: 600;color: #fff;">MISAKI的店铺</text>
+				<free-avater size="50" style="margin-right: 10rpx;margin-top: 5rpx;" :src="'https://'+merchantImage"></free-avater>
+				<text class="map-wrap-text mr-1 ml-1" style="font-weight: 600;color: #fff;">{{merchantName}}</text>
 				<text>⏷</text>
 			</view>
 			<view slot="right" class="mr-2" @click="toMy()">
@@ -14,17 +14,17 @@
 	<view class="flex flex-row pt-5" style="height: 360rpx;background-color: #FF7200;border-radius: 0px 0px 60px 60px;">
 		<view class="flex flex-1 align-center  flex-column" style="font-size: 32rpx;color: #fff;" @click="toFans()">
 			<text>总粉丝数</text>
-			<text class="mt-2">6666</text>
+			<text class="mt-2">{{fansNum}}</text>
 		</view>
 		
 		<view class="flex flex-1 align-center  flex-column" style="font-size: 32rpx;color: #fff;" @click="toDingDan()">
 			<text>本月订单</text>
-			<text class="mt-2">6666</text>
+			<text class="mt-2">{{orderNum}}</text>
 		</view>
 		
 		<view class="flex flex-1 align-center  flex-column" style="font-size: 32rpx;color: #fff;" @click="toYuE()">
-			<text>账户余额</text>
-			<text class="mt-2">6666</text>
+			<text>订单金额</text>
+			<text class="mt-2">{{orderPrice==null?0:orderPrice}}</text>
 		</view>
 		
 	</view>
@@ -104,7 +104,7 @@
 		
 		<!-- 列表 -->
 
-		<view class="ml-4 mr-4 mt-4" v-for="(item,index) in 2" :key="index">
+		<view class="ml-4 mr-4 mt-4" v-for="(item,index) in 2" :key="index" @click="toActivityDetail()">
 			<view class="flex flex-row ">
 				<image src="../../../static/common/activity.png" style="width: 220rpx;height: 160rpx;"></image>
 				 <view class="flex  flex-column">
@@ -235,6 +235,11 @@ color: #F23132;;">家同行正在使用</text>
 				},
 				tabIndex:0,
 				offsettop:0,
+				fansNum:0,
+				orderNum:0,
+				orderPrice:0,
+				merchantName:"",
+				merchantImage:"",
 				catagor: [{
 						name: '全部',
 						id:1
@@ -277,15 +282,69 @@ color: #F23132;;">家同行正在使用</text>
 				}
 			});
 			
+			this.getpassenger()
+			
+		},
+		
+		
+		onPullDownRefresh() {
+			this.getpassenger()
 		},
 		
 		
 		methods: {
 			
+			// 获取头部总览数据
+			getpassenger(){
+				// 发送到服务端
+				$H.get("/ignite/passenger/flow").then((res) => {
+					uni.stopPullDownRefresh()
+					//请求成功
+					this.fansNum=res.data.fansNum
+					this.orderNum=res.data.orderNum
+					this.orderPrice=res.data.orderprice
+					this.merchantName=res.data.merchant.merchant_name
+					this.merchantImage=res.data.merchant.merchant_image
+				}).catch((e) => {
+					uni.stopPullDownRefresh()
+					//请求失败
+					console.log("失败"+e)
+				})
+			},
+			
 			toScan(){
 				
 			},
 			
+			toActivityDetail(){
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/dazhuanpandetail/dazhuanpandetail'
+				// })
+				
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/tuiJianDetail/tuiJianDetail'
+				// })
+				
+				uni.navigateTo({
+					url:'../../activityDetail/pinTuanDetail/pinTuanDetail'
+				})
+				
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/kanJiaDetail/kanJiaDetail'
+				// })
+				
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/hongbaoDetail/hongbaoDetail'
+				// })
+				
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/zadanDetail/zadanDetail'
+				// })
+				
+				// uni.navigateTo({
+				// 	url:'../../activityDetail/miaoshaDetail/miaoshaDetail'
+				// })
+			},
 			
 			toShopList(){
 				
@@ -293,7 +352,7 @@ color: #F23132;;">家同行正在使用</text>
 			
 			toFans(){
 				uni.navigateTo({
-					url:'../../yinbao/fans/fans'
+					url:'../../wode/fans/fans'
 				})
 			},
 			
@@ -305,19 +364,19 @@ color: #F23132;;">家同行正在使用</text>
 			
 			toYuE(){
 				uni.navigateTo({
-					url:'../../yinbao/yuE/yuE'
+					url:'../../yinbao/dingdanJinE/dingdanJinE'
 				})
 			},
 			
 			toMy(){
 				uni.navigateTo({
-					url:'../../yinbao/person/person'
+					url:'../../person/person/person'
 				})
 			},
 			
 			toDianPu(){
 				uni.navigateTo({
-					url:'../../yinbao/dianPu/dianPu'
+					url:'../../dianpu/dianPu/dianPu'
 				})
 			},
 			

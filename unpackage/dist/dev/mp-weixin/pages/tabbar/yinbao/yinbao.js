@@ -94,13 +94,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uNavbar: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 283))
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-navbar/u-navbar */ "uview-ui/components/u-navbar/u-navbar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-navbar/u-navbar.vue */ 515))
   },
   uniIcon: function() {
-    return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! @/components/uni-icon/uni-icon.vue */ 155))
+    return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! @/components/uni-icon/uni-icon.vue */ 420))
   },
   uSticky: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-sticky/u-sticky */ "uview-ui/components/u-sticky/u-sticky").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-sticky/u-sticky.vue */ 290))
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-sticky/u-sticky */ "uview-ui/components/u-sticky/u-sticky").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-sticky/u-sticky.vue */ 522))
   }
 }
 var render = function() {
@@ -362,7 +362,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _request = _interopRequireDefault(__webpack_require__(/*! @/common/request.js */ 46));
 var _config = _interopRequireDefault(__webpack_require__(/*! @/common/config.js */ 47));
-var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var freeAvater = function freeAvater() {__webpack_require__.e(/*! require.ensure | components/free-avater */ "components/free-avater").then((function () {return resolve(__webpack_require__(/*! @/components/free-avater.vue */ 297));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniIcon = function uniIcon() {__webpack_require__.e(/*! require.ensure | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then((function () {return resolve(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ 155));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 302));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 48));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var freeAvater = function freeAvater() {__webpack_require__.e(/*! require.ensure | components/free-avater */ "components/free-avater").then((function () {return resolve(__webpack_require__(/*! @/components/free-avater.vue */ 529));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniIcon = function uniIcon() {__webpack_require__.e(/*! require.ensure | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then((function () {return resolve(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ 420));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 534));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
@@ -377,6 +377,11 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
 
       tabIndex: 0,
       offsettop: 0,
+      fansNum: 0,
+      orderNum: 0,
+      orderPrice: 0,
+      merchantName: "",
+      merchantImage: "",
       catagor: [{
         name: '全部',
         id: 1 },
@@ -419,15 +424,69 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
       } });
 
 
+    this.getpassenger();
+
+  },
+
+
+  onPullDownRefresh: function onPullDownRefresh() {
+    this.getpassenger();
   },
 
 
   methods: {
 
+    // 获取头部总览数据
+    getpassenger: function getpassenger() {var _this2 = this;
+      // 发送到服务端
+      _request.default.get("/ignite/passenger/flow").then(function (res) {
+        uni.stopPullDownRefresh();
+        //请求成功
+        _this2.fansNum = res.data.fansNum;
+        _this2.orderNum = res.data.orderNum;
+        _this2.orderPrice = res.data.orderprice;
+        _this2.merchantName = res.data.merchant.merchant_name;
+        _this2.merchantImage = res.data.merchant.merchant_image;
+      }).catch(function (e) {
+        uni.stopPullDownRefresh();
+        //请求失败
+        console.log("失败" + e);
+      });
+    },
+
     toScan: function toScan() {
 
     },
 
+    toActivityDetail: function toActivityDetail() {
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/dazhuanpandetail/dazhuanpandetail'
+      // })
+
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/tuiJianDetail/tuiJianDetail'
+      // })
+
+      uni.navigateTo({
+        url: '../../activityDetail/pinTuanDetail/pinTuanDetail' });
+
+
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/kanJiaDetail/kanJiaDetail'
+      // })
+
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/hongbaoDetail/hongbaoDetail'
+      // })
+
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/zadanDetail/zadanDetail'
+      // })
+
+      // uni.navigateTo({
+      // 	url:'../../activityDetail/miaoshaDetail/miaoshaDetail'
+      // })
+    },
 
     toShopList: function toShopList() {
 
@@ -435,7 +494,7 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
 
     toFans: function toFans() {
       uni.navigateTo({
-        url: '../../yinbao/fans/fans' });
+        url: '../../wode/fans/fans' });
 
     },
 
@@ -447,19 +506,19 @@ var _util = _interopRequireDefault(__webpack_require__(/*! @/common/util.js */ 4
 
     toYuE: function toYuE() {
       uni.navigateTo({
-        url: '../../yinbao/yuE/yuE' });
+        url: '../../yinbao/dingdanJinE/dingdanJinE' });
 
     },
 
     toMy: function toMy() {
       uni.navigateTo({
-        url: '../../yinbao/person/person' });
+        url: '../../person/person/person' });
 
     },
 
     toDianPu: function toDianPu() {
       uni.navigateTo({
-        url: '../../yinbao/dianPu/dianPu' });
+        url: '../../dianpu/dianPu/dianPu' });
 
     },
 

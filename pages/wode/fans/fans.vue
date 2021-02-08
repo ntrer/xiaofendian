@@ -45,7 +45,15 @@
 			
 		</view>
 		
-		<uni-load-more :status="status" :content-text="contentText" v-show="listData.length" />
+		<!-- 暂无数据 -->
+		<view v-if="listData.length==0" class="flex align-center justify-center flex-column" style="font-size: 28rpx;color: #9F9F9F;margin-top: 320rpx;">
+			<image src="../../../static/common/no_yongjin_data.png" style="height: 206rpx;width: 218rpx;"></image>
+			<text style="margin-top: 20rpx;margin-left: -52rpx;">目前暂无数据</text>
+		</view>
+		
+		
+		
+		<uni-load-more :status="status" :content-text="contentText" v-if="listData.length>0" />
 	</view>
 </template>
 
@@ -183,6 +191,7 @@
 					wx_nick_name:name||"",
 					mobile_number:phone||""
 				}
+				
 			
 				// 发送到服务端
 				$H.get("/customer_fans/page/all",param).then((res) => {
@@ -192,11 +201,15 @@
 					let list = res.data.records;
                     let pages=res.data.pages;
                      
-					if(pages>0&&this.page<=pages){
+					if(pages>1&&this.page<=pages){
 						this.listData = this.reload ? list : this.listData.concat(list);
 					}
 					else if(pages==0){
 						this.listData=[];
+						this.status ='noMore'
+					}
+					else if(pages==1){
+						this.listData = list
 						this.status ='noMore'
 					}
 					else{

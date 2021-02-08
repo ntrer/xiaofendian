@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-switch": "/uview-ui/components/u-switch/u-switch",
+    "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "divider": "/components/divider"
+  }
+}

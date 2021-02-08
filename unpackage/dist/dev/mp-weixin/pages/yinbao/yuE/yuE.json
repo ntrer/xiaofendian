@@ -6,6 +6,7 @@
   "usingComponents": {
     "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
     "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "uni-load-more": "/components/uni-load-more/uni-load-more",
     "divider": "/components/divider"
   }
 }

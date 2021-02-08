@@ -1,4 +1,5 @@
 
-.u-dropdown{
+::-webkit-scrollbar {
+	display: none;
 }
 

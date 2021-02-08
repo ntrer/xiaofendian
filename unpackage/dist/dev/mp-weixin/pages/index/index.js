@@ -92,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uButton: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 276))
+    return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 508))
   }
 }
 var render = function() {
@@ -246,6 +246,14 @@ var _default = { data: function data() {return { title: 'Hello' };}, onLoad: fun
         head_portrait_image: info.userInfo.avatarUrl };
 
 
+      var LogInfo = {
+        merchant_id: "",
+        open_id: "",
+        role: "",
+        status: "",
+        wx_user_name: "",
+        id: "" };
+
 
       var requestTask = uni.request({
         url: _config.default.baseUrl + "/public/auth_openid?js_code=" + data.code,
@@ -259,6 +267,14 @@ var _default = { data: function data() {return { title: 'Hello' };}, onLoad: fun
           // 存储用户信息
           _util.default.setStorage("userInfo", info.userInfo);
 
+          LogInfo.id = res.data.data.id;
+          LogInfo.merchant_id = res.data.data.merchant_id;
+          LogInfo.open_id = res.data.data.open_id;
+          LogInfo.role = res.data.data.role;
+          LogInfo.status = res.data.data.status;
+          LogInfo.wx_user_name = res.data.data.wx_user_name;
+          console.log(LogInfo);
+          _util.default.setStorage("LogInfo", LogInfo);
           //请求成功
           uni.showToast({
             title: "登录成功" });

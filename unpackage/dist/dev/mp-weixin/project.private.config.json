@@ -1,0 +1,143 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/tabbar/yinbao/yinbao",
+                    "pathName": "pages/tabbar/yinbao/yinbao",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinbao/shopCircle/shopCircle",
+                    "pathName": "pages/yinbao/shopCircle/shopCircle",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinbao/faBuRenWu/faBuRenWu",
+                    "pathName": "pages/yinbao/faBuRenWu/faBuRenWu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/dazhuanpandetail/dazhuanpandetail",
+                    "pathName": "pages/activityDetail/dazhuanpandetail/dazhuanpandetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/zhongJiangTongji/zhongJiangTongji",
+                    "pathName": "pages/activityDetail/zhongJiangTongji/zhongJiangTongji",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/createPoster/createPoster",
+                    "pathName": "pages/activityDetail/createPoster/createPoster",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/tuiJianDetail/tuiJianDetail",
+                    "pathName": "pages/activityDetail/tuiJianDetail/tuiJianDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/pinTuanDetail/pinTuanDetail",
+                    "pathName": "pages/activityDetail/pinTuanDetail/pinTuanDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/zadanDetail/zadanDetail",
+                    "pathName": "pages/activityDetail/zadanDetail/zadanDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/activityDetail/miaoshaDetail/miaoshaDetail",
+                    "pathName": "pages/activityDetail/miaoshaDetail/miaoshaDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/shop/shop/shop",
+                    "pathName": "pages/shop/shop/shop",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/shop/createGoods/createGoods",
+                    "pathName": "pages/shop/createGoods/createGoods",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinliu2/pintuan/pintuan",
+                    "pathName": "pages/yinliu2/pintuan/pintuan",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinbao/shopTask/shopTask",
+                    "pathName": "pages/yinbao/shopTask/shopTask",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dianpu/gouMaiFuWu/gouMaiFuWu",
+                    "pathName": "pages/dianpu/gouMaiFuWu/gouMaiFuWu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dianpu/dianPu/dianPu",
+                    "pathName": "pages/dianpu/dianPu/dianPu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinliu2/pintuan/pintuan",
+                    "pathName": "pages/yinliu2/pintuan/pintuan",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinliu2/pintuan/pintuan",
+                    "pathName": "pages/yinliu2/pintuan/pintuan",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinliu2/miaosha/miaosha",
+                    "pathName": "pages/yinliu2/miaosha/miaosha",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/yinliu/kanjia/kanjia",
+                    "pathName": "pages/yinliu/kanjia/kanjia",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

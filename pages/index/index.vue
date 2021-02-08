@@ -112,6 +112,14 @@
 					head_portrait_image:info.userInfo.avatarUrl
 				}
 				
+				let LogInfo={
+					merchant_id:"",
+					open_id:"",
+					role:"",
+					status:"",
+					wx_user_name:"",
+					id:""
+				}
 				
 				const requestTask = uni.request({
 				  url: $C.baseUrl+"/public/auth_openid?js_code="+data.code,
@@ -125,6 +133,14 @@
 					// 存储用户信息
 					 $U.setStorage("userInfo",info.userInfo)
 					 
+					 LogInfo.id=res.data.data.id
+					 LogInfo.merchant_id=res.data.data.merchant_id
+					 LogInfo.open_id=res.data.data.open_id
+					 LogInfo.role=res.data.data.role
+					 LogInfo.status=res.data.data.status
+					 LogInfo.wx_user_name=res.data.data.wx_user_name
+					 console.log(LogInfo)
+					 $U.setStorage("LogInfo",LogInfo)
 					//请求成功
 					uni.showToast({
 						title:"登录成功"

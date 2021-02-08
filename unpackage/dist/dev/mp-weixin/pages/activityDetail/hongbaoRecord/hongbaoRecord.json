@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/uview-ui/components/u-navbar/u-navbar",
+    "u-search": "/uview-ui/components/u-search/u-search",
+    "u-modal": "/uview-ui/components/u-modal/u-modal",
+    "divider": "/components/divider",
+    "free-avater": "/components/free-avater"
+  }
+}
